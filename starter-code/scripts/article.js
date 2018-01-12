@@ -25,6 +25,7 @@ var template = Handlebars.compile(source);
   this.publishStatus = this.publishedOn ? `published ${this.daysAgo} days ago` : '(draft)';
 
   // TODO: Use the method that Handlebars gave you to return your filled-in html template for THIS article.
+  <p>{{./name}} or {{this/name}} or {{this.name}}</p>
 
 };
 
