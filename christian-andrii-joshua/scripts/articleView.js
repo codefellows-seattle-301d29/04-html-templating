@@ -2,10 +2,10 @@
 
 let articleView = {};
 
-// TODO: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
+// DONE: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
 
 // COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
-// PUT YOUR RESPONSE HERE
+// If you have a normal function, it creates its own private scope inside of it. However, lexical arrow functions pass "this" down however many functions you have inside of it. 
 
 articleView.populateFilters = () => {
   $('article').each(() => {
