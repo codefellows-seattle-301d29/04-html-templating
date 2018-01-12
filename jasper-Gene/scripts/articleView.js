@@ -2,13 +2,12 @@
 
 let articleView = {};
 
-// TODO: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
-
+// DONE: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
 // COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
-// PUT YOUR RESPONSE HERE
-
-articleView.populateFilters = function() {
-  $('article').each(function() {
+// PUT YOUR RESPONSE HERE: Arrow functions will direct the "this" selection to the object and not to the parent property.
+ 
+articleView.populateFilters = () => {
+  $('article').each( () => {
     if (!$(this).hasClass('template')) {
       let val = $(this).find('address a').text();
       let optionTag = `<option value="${val}">${val}</option>`;
@@ -26,8 +25,8 @@ articleView.populateFilters = function() {
   });
 };
 
-articleView.handleAuthorFilter = function() {
-  $('#author-filter').on('change', function() {
+articleView.handleAuthorFilter = () => {
+  $('#author-filter').on('change', () => {
     if ($(this).val()) {
       $('article').hide();
       $(`article[data-author="${$(this).val()}"]`).fadeIn();
@@ -39,8 +38,8 @@ articleView.handleAuthorFilter = function() {
   });
 };
 
-articleView.handleCategoryFilter = function() {
-  $('#category-filter').on('change', function() {
+articleView.handleCategoryFilter = () => {
+  $('#category-filter').on('change', () => {
     if ($(this).val()) {
       $('article').hide();
       $(`article[data-category="${$(this).val()}"]`).fadeIn();
@@ -52,8 +51,8 @@ articleView.handleCategoryFilter = function() {
   });
 };
 
-articleView.handleMainNav = function() {
-  $('.main-nav').on('click', '.tab', function() {
+articleView.handleMainNav = () => {
+  $('.main-nav').on('click', '.tab', () => {
     $('.tab-content').hide();
     $(`#${$(this).data('content')}`).fadeIn();
   });
@@ -61,9 +60,9 @@ articleView.handleMainNav = function() {
   $('.main-nav .tab:first').click();
 };
 
-articleView.setTeasers = function() {
+articleView.setTeasers = () => {
   $('.article-body *:nth-of-type(n+2)').hide();
-  $('article').on('click', 'a.read-on', function(e) {
+  $('article').on('click', 'a.read-on', (e) => {
     e.preventDefault();
     if ($(this).text() === 'Read on →') {
       $(this).parent().find('*').fadeIn();
@@ -78,7 +77,7 @@ articleView.setTeasers = function() {
   });
 };
 
-$(document).ready(function() {
+$(document).ready(() => {
   articleView.populateFilters();
   articleView.handleCategoryFilter();
   articleView.handleAuthorFilter();
