@@ -13,7 +13,7 @@
 <!-- We used Javascript, HTML & CSS, using Normalize to reset the browser settings and Iconomoon for icons. We also used Handlebar.js for HTML templating. The CSS files are sectioned into three sections: base, layout, modules, and state. The JS files include blogArticles.js (with the raw data), article.js (which instantiates objects and pushes them to the DOM), and blogArticles (which filters data according to category or author), using the Handlebars framework. -->
 
 ## Change Log
-<!-- 01-12-2018 12:00pm - Application successfully uses Handlebars.js and arrow functions.-->
+<!-- 01-12-2018 12:00pm - Application successfully uses Handlebars.js and arrow functions.
 
 ## Credits and Collaborations
 <!-- Normalize CSS reset, Iconomoon, and Handlebars.js -->
