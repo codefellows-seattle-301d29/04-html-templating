@@ -1,7 +1,7 @@
 
 # HTML Templating
 
-**Author**: Brian Bixby
+**Author**: Brian Bixby Bessie Arino
 **Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
 
 ## Overview
