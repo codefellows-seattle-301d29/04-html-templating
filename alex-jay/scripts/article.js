@@ -12,7 +12,7 @@ function Article (rawDataObj) {
 }
 
 Article.prototype.toHtml = function() {
-  // TODO: Use Handlebars to render your articles. Get your template from the DOM and "compile" your template with Handlebars.
+  // DONE: Use Handlebars to render your articles. Get your template from the DOM and "compile" your template with Handlebars.
   let source = document.getElementById("entry-template").innerHTML;
   let template = Handlebars.compile(source);
   // REVIEW: If your template will use properties that aren't on the object yet, add them.
@@ -22,9 +22,10 @@ Article.prototype.toHtml = function() {
   this.daysAgo = parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000);
   this.publishStatus = this.publishedOn ? `published ${this.daysAgo} days ago` : '(draft)';
 
-  // TODO: Use the method that Handlebars gave you to return your filled-in html template for THIS article.
-  let context = articles[this];
+  // DONE: Use the method that Handlebars gave you to return your filled-in html template for THIS article.
+  let context = articles;
   let html = template(context);
+  return template(this);
 };
 
 // COMMENT: Why are there parentheses around "(a,b)" in the .sort() method, but not around the "articleObject" or "article" arguments in the .forEach() methods?
