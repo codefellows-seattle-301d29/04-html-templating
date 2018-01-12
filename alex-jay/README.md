@@ -1,6 +1,6 @@
 # jQuery Events
 
-**Author**: Alex Bowers
+**Author**: Jay Adams
 **Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
 
 ## Overview
@@ -19,7 +19,7 @@ We are using javascript, html, .css and jquery to build this app.
 
 
 ## Credits and Collaborations
-Bessie Arino was a Collaborator
+Alex Bowers was a Collaborator
 
 normalize.css
 jQuery
