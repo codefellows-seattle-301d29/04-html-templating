@@ -26,8 +26,6 @@ let template = Handlebars.compile(source);
   //? is a turner operator code. It will evaluate if the first statment is true, return it. If not, use the statement after the :
 
   // DONE: Use the method that Handlebars gave you to return your filled-in html template for THIS article.
-  let context = articles;
-  let html = template(context);
   return template(this);
 };
 
