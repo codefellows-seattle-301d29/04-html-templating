@@ -7,7 +7,7 @@ let articleView = {};
 // COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
 // PUT YOUR RESPONSE HERE
 //Arrow functions basically do *not* affect the context of this, meaning that given an arrow function has the same context of its parent block.
-//Whereas a traditional function inside a traditional function will have its *own* scope, an arrow function inside a traditional function will have the same "this" as the traditional function. 
+//Whereas a traditional function inside a traditional function will have its *own* scope, an arrow function inside a traditional function will have the same "this" as the traditional function.
 
 articleView.populateFilters = () => {
   $('article').each(function() {

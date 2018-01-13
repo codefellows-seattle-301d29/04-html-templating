@@ -28,7 +28,7 @@ Article.prototype.toHtml = function() {
 
 // COMMENT: Why are there parentheses around "(a,b)" in the .sort() method, but not around the "articleObject" or "article" arguments in the .forEach() methods?
 // PUT YOUR RESPONSE HERE
-// This is because parens are optional whilst passing lexical arrow functions one and only one parameter. 
+// This is because parens are optional whilst passing lexical arrow functions one and only one parameter.
 rawData.sort((a,b) => {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
