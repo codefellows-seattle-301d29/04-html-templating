@@ -5,10 +5,10 @@ let articleView = {};
 // TODO: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
 
 // COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
-// Arrow functions do not affect the context of 'this', they get the same scope as the parent function.
+// PUT YOUR RESPONSE HERE
 
 articleView.populateFilters = () => {
-  $('article').each(function () {
+  $('article').each(function() {
     if (!$(this).hasClass('template')) {
       let val = $(this).find('address a').text();
       let optionTag = `<option value="${val}">${val}</option>`;
