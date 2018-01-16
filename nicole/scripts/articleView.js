@@ -5,7 +5,8 @@ let articleView = {};
 // TODO: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
 
 // COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
-// PUT YOUR RESPONSE HERE
+// Arrow functions do not change the scope of "this", however writing "function" will. Arrow functions allow you to inherit the scope you're in if needed.
+// We do not refactor the $each(function() {}) because we do not want the scope of this to be inherited from anywhere, we want it directly from the $('article') item that is being worked on.
 
 articleView.populateFilters = () => {
   $('article').each(function() {
