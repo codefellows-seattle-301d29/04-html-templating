@@ -24,12 +24,12 @@ Article.prototype.toHtml = function() {
 
   // TODO: Use the method that Handlebars gave you to return your filled-in html template for THIS article.
 
-    return template(this);
+  return template(this);
 };
 
 // COMMENT: Why are there parentheses around "(a,b)" in the .sort() method, but not around the "articleObject" or "article" arguments in the .forEach() methods?
 // PUT YOUR RESPONSE HERE
-// you only need to put parentheses around a functions parameters if there are more than one to pass. 
+// you only need to put parentheses around a functions parameters if there are more than one to pass.
 
 rawData.sort((a,b) => {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
