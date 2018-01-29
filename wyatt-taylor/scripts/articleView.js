@@ -6,7 +6,7 @@ let articleView = {};
 
 // COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
 // Arrow functions change the scoping of "this". This is important to consider when you have functions nested within functions.
-articleView.populateFilters = function(){
+articleView.populateFilters = () => {
   $('article').each(function() {
     if (!$(this).hasClass('template')) {
       let val = $(this).find('address a').text();
@@ -25,7 +25,7 @@ articleView.populateFilters = function(){
   });
 };
 
-articleView.handleAuthorFilter = function() {
+articleView.handleAuthorFilter = () => {
   $('#author-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
@@ -38,7 +38,7 @@ articleView.handleAuthorFilter = function() {
   });
 };
 
-articleView.handleCategoryFilter = function() {
+articleView.handleCategoryFilter = () => {
   $('#category-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
