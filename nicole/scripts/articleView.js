@@ -5,9 +5,10 @@ let articleView = {};
 // TODO: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
 
 // COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
-// PUT YOUR RESPONSE HERE
+// Arrow functions do not change the scope of "this", however writing "function" will. Arrow functions allow you to inherit the scope you're in if needed.
+// We do not refactor the $each(function() {}) because we do not want the scope of this to be inherited from anywhere, we want it directly from the $('article') item that is being worked on.
 
-articleView.populateFilters = function() {
+articleView.populateFilters = () => {
   $('article').each(function() {
     if (!$(this).hasClass('template')) {
       let val = $(this).find('address a').text();
@@ -26,7 +27,7 @@ articleView.populateFilters = function() {
   });
 };
 
-articleView.handleAuthorFilter = function() {
+articleView.handleAuthorFilter = () => {
   $('#author-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
@@ -39,7 +40,7 @@ articleView.handleAuthorFilter = function() {
   });
 };
 
-articleView.handleCategoryFilter = function() {
+articleView.handleCategoryFilter = () => {
   $('#category-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
@@ -52,7 +53,7 @@ articleView.handleCategoryFilter = function() {
   });
 };
 
-articleView.handleMainNav = function() {
+articleView.handleMainNav = () => {
   $('.main-nav').on('click', '.tab', function() {
     $('.tab-content').hide();
     $(`#${$(this).data('content')}`).fadeIn();
@@ -61,7 +62,7 @@ articleView.handleMainNav = function() {
   $('.main-nav .tab:first').click();
 };
 
-articleView.setTeasers = function() {
+articleView.setTeasers = () => {
   $('.article-body *:nth-of-type(n+2)').hide();
   $('article').on('click', 'a.read-on', function(e) {
     e.preventDefault();
@@ -78,7 +79,7 @@ articleView.setTeasers = function() {
   });
 };
 
-$(document).ready(function() {
+$(document).ready(() => {
   articleView.populateFilters();
   articleView.handleCategoryFilter();
   articleView.handleAuthorFilter();
