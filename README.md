@@ -69,24 +69,38 @@ _Your README.md must include:_
 ```md
 # Project Name
 
-**Author**: Your Name Goes Here
-**Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
+**Author**: Wyatt Pefley and Taylor Stemple
+**Version**: 1.5.0 (increment the patch/fix version number up if you make more commits past your first submission)
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code Fellows 301 class. (i.e. What's your problem domain?) -->
-
+This assignment uses the Handlebar js library in order to dynamically generate blog articles based filters put in place by the user.
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
-
+1. Fork original repo
+2. Copy repo to your local machine.
+3. Read through the code and make sure you understand what each line is doing.
+4. Follow the instructions carefully and comment code when asked as well.
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
-
+Languages used:
+1. JavaScript
+2. HTML
+3. CSS
+Libraries Used
+1. Handlebars JS
+2. jQuery
+We use HTML and CSS to provide the skeleton framwork of the app and used JS as the controller in which to generate content onto our model.
 ## Change Log
 <!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
+1-12-18 9:05 - Created handlebar template
+1-12-18 9:20 - Refactored functions into lexical arrow functions
+1-12-18 9:40 - Compiled and rendered our articles
+1-12-18 10:00 - tidy up/ Users stories/ README
 
 ## Credits and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+Taylor Stemple - https://github.com/TrrLrr
 -->
 ```
